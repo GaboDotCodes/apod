@@ -15,3 +15,8 @@ I sketched a wireframe about how I imagined this. [Check here](https://photos.ap
 Then I made its mockup in figma. [Check here](https://www.figma.com/file/I673kIvzYcl6RmGANvdKrB/APOD-Astronomy-Picture-Of-the-Day).  
 **Wireframe vs Mockup**
 ![Wireframe vs Mockup](/images/BeforeAfter.png)
+
+---
+
+**23/09/21**  
+Ihttps://gabodotcodes.github.io/apod/src/
