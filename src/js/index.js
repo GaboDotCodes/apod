@@ -68,7 +68,7 @@ const filterData = (data) => {
 
 const searchDay = () => {
     const pickedDay = $date.value;
-    window.location.href = `${BASE_URL}?day=${pickedDay}`;
+    window.location.href += `?day=${pickedDay}`;
 };
 
 const main = async () => {
