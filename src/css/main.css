@@ -95,6 +95,7 @@
     height: 2.5em;
     border-radius: 50%;
     color: var(--text-color);
+    cursor: pointer;
 }
 
 .result-area {
@@ -105,6 +106,10 @@
     padding: 2em;
 }
 
+.lottie-astronaut{
+    height: 100%;
+}
+
 .card {
     background-color: var(--text-color);
     display: flex;
@@ -113,6 +118,11 @@
     padding: 1.5em 0em;
     border-radius: 1em;
     margin-bottom: 1em;
+    width: 90%;
+}
+
+.image-link {
+    text-align: center;
 }
 
 .image {
@@ -151,6 +161,10 @@ body {
         width: 60vw;
         height: 100vh;
         overflow: scroll;
+    }
+    
+    .credits {
+        font-size: 1.5em;
     }
 }
   
