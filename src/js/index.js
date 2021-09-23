@@ -27,7 +27,7 @@ const renderInfo = (resultDiv, media_type, link, imageUrl, title, date, explanat
             <div class="info-result">
                 <h1 class="title-result">${title}</h1>
                 <span class="date-result"><time>${date}</time></span>
-                ${media_type === 'image'? `<span class="author-result">© ${author}</span>` : ''}
+                ${author? `<span class="author-result">© ${author}</span>` : ''}
             </div>
         </div>
         <div class="explanation-result">
@@ -68,18 +68,31 @@ const filterData = (data) => {
 
 const searchDay = () => {
     const pickedDay = $date.value;
-    window.location.href += `?day=${pickedDay}`;
+    window.location.href = `?day=${pickedDay}`;
+    
+};
+
+const preloadImage = (url) => {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = url;
+    })
 };
 
 const main = async () => {
     try {
         $date.setAttribute("max", todayString());
+        $date.setAttribute("value", dayParam);
         if (dayParam) {
             const data = await fetchDataApod(dayParam);
             const { media_type, link, imageUrl, title, date, explanation, author} = filterData(data);
+            const img = await preloadImage(imageUrl);
+            console.log(img);
             renderInfo($result, media_type, link, imageUrl, title, date, explanation, author);
         }
-
+        
     } catch (error) {
         console.log('ERR MAIN');
         console.log(error)
