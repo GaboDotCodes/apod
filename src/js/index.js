@@ -1,5 +1,6 @@
 const $date = document.querySelector('#date');
 const $result = document.querySelector('#result');
+const $loading = document.querySelector('#loading');
 
 const BASE_URL = window.location.origin;
 
@@ -86,6 +87,7 @@ const main = async () => {
         $date.setAttribute("max", todayString());
         $date.setAttribute("value", dayParam);
         if (dayParam) {
+            $loading.style.opacity = 1;
             const data = await fetchDataApod(dayParam);
             const { media_type, link, imageUrl, title, date, explanation, author} = filterData(data);
             const img = await preloadImage(imageUrl);
