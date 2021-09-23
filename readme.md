@@ -19,4 +19,6 @@ Then I made its mockup in figma. [Check here](https://www.figma.com/file/I673kIv
 ---
 
 **23/09/21**  
-Ihttps://gabodotcodes.github.io/apod/src/
+I got it.  
+I've been practicing about media queries, flex, fetch api, promises, async/await and other topics about web development.  
+Finally, I deployed this in [GitHub Pages](https://gabodotcodes.github.io/apod/src/)
